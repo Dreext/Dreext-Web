@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dreext Personal Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo-mark">DX</div>
+      <div class="hero-text">
+        <h1>Dreext Personal Website</h1>
+        <p class="tagline">Welcome in — a personal hub that blends art, code, and curiosity.</p>
+      </div>
+    </header>
+
+    <main>
+      <section aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
+        <p>I love to draw, and I am a 3rd-year computer science student exploring how design and software can amplify each other. Right now I am sharpening my front-end skills, experimenting with visuals, and building small projects that keep my creativity moving.</p>
+      </section>
+
+      <section aria-labelledby="hobbies-heading">
+        <h2 id="hobbies-heading">Hobbies</h2>
+        <ul>
+          <li>Drawing</li>
+          <li>Watching anime</li>
+          <li>Reading manga</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+        <p>Tap an activity to reveal its preview (Acts 1–6). Highlights for Act 4 and Act 5 are noted below the grid.</p>
+        <div class="project-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Act 1: Clipping Mask</h3>
+            </div>
+            <button type="button" data-action="toggle-project" data-target="act-1">Show Preview</button>
+            <div class="project-visual" id="act-1">
+              <img src="act 1.png" alt="Act 1 clipping mask preview" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Act 2: Brochure</h3>
+            </div>
+            <button type="button" data-action="toggle-project" data-target="act-2">Show Preview</button>
+            <div class="project-visual" id="act-2">
+              <img src="act 2.png" alt="Act 2 brochure preview" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Act 3: Layer Mask</h3>
+            </div>
+            <button type="button" data-action="toggle-project" data-target="act-3">Show Preview</button>
+            <div class="project-visual" id="act-3">
+              <div class="subparts" aria-label="Layer mask parts">
+                <div class="subpart">
+                  <h4>Mask Effects</h4>
+                  <div class="src-line">
+                    <span class="src-label">src:</span>
+                    <input class="image-slot" type="text" aria-label="Mask effects image source" data-preview="mask-effects-preview" placeholder="mask-effects.png" />
+                  </div>
+                  <img class="sub-preview" id="mask-effects-preview" src="act 3.png" data-fallback="act 3.png" alt="Mask effects preview" loading="lazy" />
+                </div>
+                <div class="subpart">
+                  <h4>Text Around Image</h4>
+                  <div class="src-line">
+                    <span class="src-label">src:</span>
+                    <input class="image-slot" type="text" aria-label="Text around image source" data-preview="text-around-preview" placeholder="text-around.png" />
+                  </div>
+                  <img class="sub-preview" id="text-around-preview" src="act 3 (2).png" data-fallback="act 3 (2).png" alt="Text around image preview" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Act 4: Selections</h3>
+            </div>
+            <button type="button" data-action="toggle-project" data-target="act-4">Hide Preview</button>
+            <div class="project-visual visible" id="act-4">
+              <img src="act 4.png" alt="Act 4 selections preview" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Act 5: Blending Modes</h3>
+            </div>
+            <button type="button" data-action="toggle-project" data-target="act-5">Show Preview</button>
+            <div class="project-visual" id="act-5">
+              <div class="subparts" aria-label="Blending modes parts">
+                <div class="subpart">
+                  <h4>Soft Light</h4>
+                  <div class="src-line">
+                    <span class="src-label">src:</span>
+                    <input class="image-slot" type="text" aria-label="Soft light image source" data-preview="soft-light-preview" />
+                  </div>
+                  <img class="sub-preview" id="soft-light-preview" src="soft light act 5.png" data-fallback="soft light act 5.png" alt="Soft light preview" loading="lazy" />
+                </div>
+                <div class="subpart">
+                  <h4>Overlay</h4>
+                  <div class="src-line">
+                    <span class="src-label">src:</span>
+                    <input class="image-slot" type="text" aria-label="Overlay image source" data-preview="overlay-preview" />
+                  </div>
+                  <img class="sub-preview" id="overlay-preview" src="overlay act 5.png" data-fallback="overlay act 5.png" alt="Overlay preview" loading="lazy" />
+                </div>
+                <div class="subpart">
+                  <h4>Screen</h4>
+                  <div class="src-line">
+                    <span class="src-label">src:</span>
+                    <input class="image-slot" type="text" aria-label="Screen image source" data-preview="screen-preview" />
+                  </div>
+                  <img class="sub-preview" id="screen-preview" src="screen act 5.png" data-fallback="screen act 5.png" alt="Screen preview" loading="lazy" />
+                </div>
+                <div class="subpart">
+                  <h4>Multiply</h4>
+                  <div class="src-line">
+                    <span class="src-label">src:</span>
+                    <input class="image-slot" type="text" aria-label="Multiply image source" data-preview="multiply-preview" />
+                  </div>
+                  <img class="sub-preview" id="multiply-preview" src="multiply act 5.png" data-fallback="multiply act 5.png" alt="Multiply preview" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Act 6: Layer Style</h3>
+            </div>
+            <button type="button" data-action="toggle-project" data-target="act-6">Show Preview</button>
+            <div class="project-visual" id="act-6">
+              <div class="subparts" aria-label="Layer style parts">
+                <div class="subpart">
+                  <h4>Creative</h4>
+                  <div class="src-line">
+                    <span class="src-label">src:</span>
+                    <input class="image-slot" type="text" aria-label="Creative layer style image source" data-preview="creative-style-preview" />
+                  </div>
+                  <img class="sub-preview" id="creative-style-preview" src="Craetive act 6.png" data-fallback="Craetive act 6.png" alt="Creative layer style preview" loading="lazy" />
+                </div>
+                <div class="subpart">
+                  <h4>Future</h4>
+                  <div class="src-line">
+                    <span class="src-label">src:</span>
+                    <input class="image-slot" type="text" aria-label="Future layer style image source" data-preview="future-style-preview" />
+                  </div>
+                  <img class="sub-preview" id="future-style-preview" src="Future act 6.png" data-fallback="Future act 6.png" alt="Future layer style preview" loading="lazy" />
+                </div>
+                <div class="subpart">
+                  <h4>Never Give Up</h4>
+                  <div class="src-line">
+                    <span class="src-label">src:</span>
+                    <input class="image-slot" type="text" aria-label="Never Give Up layer style image source" data-preview="ngu-style-preview" />
+                  </div>
+                  <img class="sub-preview" id="ngu-style-preview" src="Never Give Up act 6.png" data-fallback="Never Give Up act 6.png" alt="Never Give Up layer style preview" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="act-shortcuts" aria-label="Quick buttons for Acts 4, 5, and 6">
+          <button type="button" data-action="toggle-project" data-target="act-4">Toggle Act 4</button>
+          <button type="button" data-action="toggle-project" data-target="act-5">Toggle Act 5</button>
+          <button type="button" data-action="toggle-project" data-target="act-6">Toggle Act 6</button>
+        </div>
+
+        <div class="act-briefs" aria-label="Highlights for Act 4 and Act 5">
+          <div class="act-brief">
+            <h3>Act 4 Highlight</h3>
+            <p>Selections study—clean edges and precise isolation to guide focus.</p>
+          </div>
+          <div class="act-brief">
+            <h3>Act 5 Highlight</h3>
+            <p>Blending modes exploration—mixing overlays to build atmosphere and contrast.</p>
+          </div>
+        </div>
+
+        <section aria-labelledby="techniques-heading" class="techniques">
+          <h2 id="techniques-heading">Techniques Covered</h2>
+          <div class="technique-grid">
+            <div class="technique-card">
+              <h3>Clipping Mask</h3>
+              <p>Using shapes to reveal artwork selectively and keep compositions tidy.</p>
+            </div>
+            <div class="technique-card">
+              <h3>Brochure</h3>
+              <p>Layout practice focused on hierarchy, alignment, and balanced spacing.</p>
+            </div>
+            <div class="technique-card">
+              <h3>Layer Mask</h3>
+              <p>Non-destructive edits to fade and blend elements smoothly.</p>
+            </div>
+            <div class="technique-card">
+              <h3>Selections</h3>
+              <p>Clean cutouts and edge refinement to separate subjects from backgrounds.</p>
+            </div>
+            <div class="technique-card">
+              <h3>Blending Modes</h3>
+              <p>Mixing overlays and multiplies to create depth, light, and mood.</p>
+            </div>
+            <div class="technique-card">
+              <h3>Layer Style</h3>
+              <p>Shadows, glows, and strokes to add polish without flattening assets.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
